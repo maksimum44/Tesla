@@ -76,6 +76,76 @@ body {
 .button:hover {
   background-color: #770302;
 }
+
+.menu {
+  background-color: rgba(14, 13, 13, 0.9);
+  position: absolute;
+  top: 0;
+  left: -1000%;
+  width: 100%;
+  transition: all 0.5s;
+  z-index: 7;
+}
+.menu.active {
+  left: 0;
+}
+.header-content.active {
+  display: none;
+}
+.header-top.active {
+  display: none;
+}
+.container-menu {
+  position: relative;
+}
+.close-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 31px;
+  right: 15px;
+  cursor: pointer;
+}
+.close-btn::after,
+.close-btn::before {
+  content: "";
+  width: 70px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  transform-origin: left;
+}
+.close-btn::after {
+  transform: rotate(45deg);
+}
+.close-btn::before {
+  transform: rotate(-45deg);
+  bottom: -1px;
+}
+.menu__list {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.menu__list ul {
+  list-style: none;
+}
+.menu__list a {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  padding: 30px 25px 14px 0;
+  border-bottom: 3px solid #b70021;
+  display: inline-block;
+  min-width: 368px;
+  transition: all 0.5s;
+}
+.menu__list a:hover {
+  border-color: #fff;
+  color: #b70021;
+  transform: scale(1.2);
+  margin-left: 37px;
+}
 .slider__item {
   height: 100vh;
   background-repeat: no-repeat;
